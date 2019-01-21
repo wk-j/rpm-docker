@@ -4,3 +4,7 @@ services:
     build:
       context: "./docker/CentOS"
       dockerfile: "Dockerfile"
+  app:
+    build:
+      context: "./docker/App"
+      dockerfile: "Dockerfile"

@@ -1,0 +1,12 @@
+[Unit]
+Description=My Web
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=dotnet /usr/shared/my-web/MyWeb.dll
+ExecStop=killall dotnet
+
+[Install]
+WantedBy=multi-user.target
