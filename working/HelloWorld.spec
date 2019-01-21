@@ -1,10 +1,10 @@
-Name:   My Web
+Name:   hello-world
 Version: 1
 Release: 1
 Summary: My Web
 License: FIXME
 
-%decription
+%description
 This is my first RPM package
 
 %prep
@@ -22,6 +22,3 @@ install -m 755 hello-world.sh %{buildroot}/usr/bin/hello-world.sh
 
 %files
 /usr/bin/hello-world.sh
-
-%changelog
-# let skip this for now

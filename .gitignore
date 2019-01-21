@@ -16,6 +16,7 @@ publish
 .project
 .working
 .publish
+*.rpm
 
 target
 BenchmarkDotNet.Artifacts
