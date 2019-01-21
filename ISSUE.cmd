@@ -14,3 +14,8 @@ ant to true if you want to run with no globalization support.
    at System.AppDomain.InitializeCompatibilityFlags()
    at System.AppDomain.Setup(System.Object)
 Aborted
+
+
+> systemctl enable MyWeb
+> systemctl start MyWeb
+Failed to get D-Bus connection: Operation not permitted

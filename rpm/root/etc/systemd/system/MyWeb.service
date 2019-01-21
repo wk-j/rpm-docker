@@ -1,0 +1,8 @@
+[Unit]
+Description=My Web
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/bin/bin/env dotnet /usr/shared/my-web/MyWeb.dll

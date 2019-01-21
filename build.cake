@@ -12,17 +12,13 @@ var name = "MyWeb";
 var currentDir = new DirectoryInfo(".").FullName;
 var info = Parser.Parse($"src/{name}/{name}.csproj");
 
-var workingDir = "working";
-var publishDir = System.IO.Path.Combine("working","publish");
+var workingDir = ".working";
+var publishDir = System.IO.Path.Combine(workingDir,"publish");
 
-Task("Build-Rpm").Does(() => {
+Task("Prepare").Does(() => {
     CreateDirectory(workingDir);
-    CopyFiles("MyWeb.spec", workingDir);
-    var dir = new System.IO.DirectoryInfo(".").FullName;
-    PS.StartProcess(string.Join("", new [] {
-        "docker run",
-        $"-v {dir}/working:/working",
-    }));
+    CopyFiles("rpm/*", workingDir);
+    CopyDirectory("rpm/root", workingDir);
 });
 
 Task("Pack").Does(() => {
