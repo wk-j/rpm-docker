@@ -11,9 +11,9 @@ var name = "MyWeb";
 
 var currentDir = new DirectoryInfo(".").FullName;
 var info = Parser.Parse($"src/{name}/{name}.csproj");
-var publishDir = ".publish";
 
 var workingDir = "working";
+var publishDir = System.IO.Path.Combine("working","publish");
 
 Task("Build-Rpm").Does(() => {
     CreateDirectory(workingDir);
