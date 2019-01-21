@@ -12,8 +12,7 @@ This is my first RPM package
 
 %install
 mkdir -p %{buildroot}/usr/share/my-web
-cp -a /working/publish/. /usr/share/my-web
-chmod 775 /usr/share/my-web/MyWeb
+cp -a /working/publish/. %{buildroot}/usr/share/my-web
 
 %files
 /usr/share/my-web

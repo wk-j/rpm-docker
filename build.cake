@@ -36,7 +36,7 @@ Task("Publish-Redhat").Does(() => {
     CleanDirectory(publishDir);
     DotNetCorePublish($"src/{name}", new DotNetCorePublishSettings {
         OutputDirectory = publishDir,
-        Runtime = "rhel-x64"
+        // Runtime = "rhel-x64"
     });
 });
 
