@@ -1,11 +1,13 @@
 [Unit]
 Description=My Web
+After=network.target
 
 [Service]
 Type=simple
 Restart=always
 RestartSec=1
-ExecStart=dotnet /usr/shared/my-web/MyWeb.dll
+WorkingDirector=/usr/share/my-web
+ExecStart=dotnet /usr/share/my-web/MyWeb.dll
 ExecStop=killall dotnet
 
 [Install]
